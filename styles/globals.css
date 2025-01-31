@@ -52,3 +52,16 @@ input[type=checkbox]:checked:after {
     top: 2px;
     left: 6px;
 }
+
+@media only screen and (max-device-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-device-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+}
+

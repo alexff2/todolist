@@ -59,3 +59,23 @@
 .tableContainer td:last-child {
     width: 40px;
 }
+
+@media only screen and (max-device-width: 900px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .tableContainer {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    .tableContainer {
+        padding: 10px;
+    }
+}
