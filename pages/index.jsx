@@ -1,11 +1,12 @@
+import style from '../styles/Home.module.css'
 import rfModule from '../rf'
 
 const {rfs, group} = rfModule
 
 const ModuleComponent = ({gp}) => {
     return (
-        <div>
-            <h2>{gp.code}-{gp.desc}</h2>
+        <div className={style.tableContainer}>
+            <h2>{gp.code} - {gp.desc}</h2>
 
             <table>
                 <tbody>
@@ -25,15 +26,21 @@ const ModuleComponent = ({gp}) => {
 function Home(){
     return(
         <>
-            <div>
+            <div className={style.header}>
                 <h1>Requisitos Funcionais</h1>
 
-                <div>{rfs.length}</div>
+                <div className={style.percent}>
+                    <div>
+                        {rfs.filter(rf => rf.isDone).length} / {rfs.length}
+                    </div>
+                </div>
             </div>
 
-            {group.map(gp => (
-                <ModuleComponent key={gp.code} gp={gp}/>    
-            ))}
+            <div className={style.content}>
+                {group.map(gp => (
+                    <ModuleComponent key={gp.code} gp={gp} />
+                ))}
+            </div>
         </>
     )
 }

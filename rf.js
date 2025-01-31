@@ -4,7 +4,7 @@ export default {
             code: 'RF 001',
             desc: 'O sistema deve permitir o cadastro de empresas (lojas e centros de distribuição), incluindo informações como nome, CNPJ, endereço, telefone e e-mail. E somente por usuários com permissão para tal',
             groupId: 1,
-            isDone: true
+            isDone: false
         },
         {
             code: 'RF 002',
